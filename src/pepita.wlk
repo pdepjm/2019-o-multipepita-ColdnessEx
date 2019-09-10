@@ -73,19 +73,17 @@ object manzana {
 }
 
 object mijo {
-	var energia = 20
+	var mojado = false
 	
 	method mojarse() {
-		energia = 15
+		 mojado = true
 	}
 	
 	method secarse() {
-		energia = 20
+		mojado = false
 	}
 	
-	method energiaQueOtorga() { 
-		return energia
-	}
+	method energiaQueOtorga() = if (mojado) 15 else 20
 }
 
 object canelones {
